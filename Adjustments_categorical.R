@@ -1,31 +1,10 @@
-library(pcalg)
-library(splines)
-library(nnet)
-library(gtools)
-library(rje)
-library(dplyr)
-
-## causalDisco functions that are not adjusted: Basically importing all package functions.
-
-source("D:/Data/workdata/708625/Christoffer/causalDisco/compare.R")
-source("D:/Data/workdata/708625/Christoffer/causalDisco/confusion.R")
-source("D:/Data/workdata/708625/Christoffer/causalDisco/corTest.R")
-source("D:/Data/workdata/708625/Christoffer/causalDisco/edges.R")
-source("D:/Data/workdata/708625/Christoffer/causalDisco/evaluate.R")
-source("D:/Data/workdata/708625/Christoffer/causalDisco/gausCorScore.R")
-source("D:/Data/workdata/708625/Christoffer/causalDisco/maketikz.R")
-source("D:/Data/workdata/708625/Christoffer/causalDisco/metrics.R")
-source("D:/Data/workdata/708625/Christoffer/causalDisco/misc.R")
-source("D:/Data/workdata/708625/Christoffer/causalDisco/nDAGs.R")
-source("D:/Data/workdata/708625/Christoffer/causalDisco/plot.R")
-source("D:/Data/workdata/708625/Christoffer/causalDisco/plotTempoMech.R")
-source("D:/Data/workdata/708625/Christoffer/causalDisco/probmat2amat.R")
-source("D:/Data/workdata/708625/Christoffer/causalDisco/regTest.R")
-source("D:/Data/workdata/708625/Christoffer/causalDisco/simDAG.R")
-source("D:/Data/workdata/708625/Christoffer/causalDisco/simGausFromDAG.R")
-source("D:/Data/workdata/708625/Christoffer/causalDisco/tamat.R")
-source("D:/Data/workdata/708625/Christoffer/causalDisco/tpc.R")
-
+# Libraries used in the package adjustment:
+#library(pcalg)
+#library(splines)
+#library(nnet)
+#library(gtools)
+#library(rje)
+#library(dplyr)
 
 ## causalDisco adjustments: 
 # Allowing for categorical responses, weights in the conditional independence tests, a conservative collider orientation option, and then finally algorithm 2 from Perkovic et. al (2018).
