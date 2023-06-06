@@ -1,3 +1,5 @@
+#' An updated version of the tpc.R file from the causalDisco package to make it work with the added functionalities in the Adjustments.R file.
+
 #' Perform causal discovery using the temporal PC algorithm (TPC)
 #'
 #' @param data A data.frame with data. All variables should be
