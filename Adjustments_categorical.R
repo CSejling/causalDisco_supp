@@ -4,6 +4,7 @@ library(nnet)
 library(gtools)
 library(rje)
 library(dplyr)
+library(causalDisco)
 
 ## causalDisco adjustments: 
 # Allowing for categorical responses, weights in the conditional independence tests, a conservative collider orientation option, and then finally algorithm 2 from Perkovic et. al (2018).
