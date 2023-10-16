@@ -450,11 +450,11 @@ vOrientTemporal <- function(skelAmat, sepsets, conservative = FALSE, data = NULL
               
               # The conditions from pcalg software article for checking faithfulness:
               
-              if (((!(i %in% unionSep))) & (sum(unlist(lapply(c(sSepSetsA, sSepSetsB), function(x) i %in% x)))==0)){ 
+              if (((!(i %in% unionSep))) & (sum(unlist(lapply(c(sSepSetsA, sSepSetsB), function(x) i %in% x)))==0)){ # If i is not in the unionSep, i should not be in any separating set.
                 status <- 'faithful'
               }
               
-              if ((((i %in% unionSep))) & (sum(unlist(lapply(c(sSepSetsA, sSepSetsB), function(x) i %in% x)))==length(c(sSepSetsA, sSepSetsB)))){
+              if ((((i %in% unionSep))) & (sum(unlist(lapply(c(sSepSetsA, sSepSetsB), function(x) i %in% x)))==length(c(sSepSetsA, sSepSetsB)))){ # If i is in the unionSep, it should be in any separating set, as i is on a three-node path between its neighbours.
                 status <- 'faithful'
               }
               
@@ -469,7 +469,7 @@ vOrientTemporal <- function(skelAmat, sepsets, conservative = FALSE, data = NULL
               
               #if this does not contradict directional information
               #already in the graph
-              if (skelAmat[i,j1] == 1 & skelAmat[i,j2] == 1) { # If we have not already ruled out that j1 -> i may be true and j2 -> may be true, then that is the case.
+              if (skelAmat[i,j1] == 1 & skelAmat[i,j2] == 1) { # If we have not already ruled out that j1 -> i may be true and j2 -> i may be true, then that is the case.
                 skelAmat[j1, i] <- 0
                 skelAmat[j2, i] <- 0
               }
