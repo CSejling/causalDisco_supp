@@ -458,7 +458,7 @@ vOrientTemporal <- function(skelAmat, sepsets, conservative = FALSE, data = NULL
                 status <- 'faithful'
               }
               
-              if (length(c(sSepSetsA,sSepSetsB))==0){ # They were supposed to not be adjacent as per one of the outer loop conditions!
+              if (length(c(sSepSetsA,sSepSetsB))==0){ # They were supposed to not be adjacent, and hence should be able to be separated, as per one of the outer loop conditions!
                 status <- 'unfaithful'
               }
               
